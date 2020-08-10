@@ -53,7 +53,7 @@ public abstract class WebUIBase {
         } else if (curBrowser.equalsIgnoreCase("nogui")) {
             System.setProperty("webdriver.chrome.driver", chromePath);
             ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.addArguments("--disable-extensions","--headless");
+            chromeOptions.addArguments("--headless","--no-sandbox","--disable-extensions");
             driver = new ChromeDriver(chromeOptions);
         } else {
             System.setProperty("webdriver.firefox.bin", firefoxPath);
