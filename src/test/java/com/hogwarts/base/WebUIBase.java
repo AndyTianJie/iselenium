@@ -53,11 +53,7 @@ public abstract class WebUIBase {
         } else if (curBrowser.equalsIgnoreCase("nogui")) {
             System.setProperty("webdriver.chrome.driver", chromePath);
             ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.addArguments("--no-sandbox");
-            chromeOptions.addArguments("--disable-extensions");
-            chromeOptions.addArguments("--headless");
-            chromeOptions.addArguments("--disable-gpu");
-            chromeOptions.addArguments("-–disable-dev-shm-usage");
+            chromeOptions.addArguments("--no-sandbox","--disable-extensions","--headless");
             driver = new ChromeDriver(chromeOptions);
         } else {
             System.setProperty("webdriver.firefox.bin", firefoxPath);
