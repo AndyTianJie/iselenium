@@ -53,8 +53,9 @@ public abstract class WebUIBase {
         } else if (curBrowser.equalsIgnoreCase("nogui")) {
             System.setProperty("webdriver.chrome.driver", chromePath);
             ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.addArguments("--headless");
             chromeOptions.addArguments("--no-sandbox");
+            chromeOptions.addArguments("--disable-extensions");
+            chromeOptions.addArguments("--headless");
             chromeOptions.addArguments("--disable-gpu");
             chromeOptions.addArguments("-–disable-dev-shm-usage");
             driver = new ChromeDriver(chromeOptions);
