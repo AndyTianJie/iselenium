@@ -61,6 +61,7 @@ public abstract class WebUIBase {
             driver = new FirefoxDriver();
         }
 
+
         WebDriver.Timeouts timeout = driver.manage().timeouts();
         timeout.setScriptTimeout(waitTime, java.util.concurrent.TimeUnit.SECONDS);
         timeout.pageLoadTimeout(waitTime, java.util.concurrent.TimeUnit.SECONDS);
